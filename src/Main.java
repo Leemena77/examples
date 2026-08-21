@@ -10,25 +10,28 @@ public class Main {
         }
     }
     public static class Person {
-        private String name;
-        private String surname;
+        public String name;
+        public String surname;
 
-        public Person(String name, String surname) {
+        public Person(String name, String surname){
             this.name = name;
             this.surname = surname;
         }
+
         @Override
-        public String toString() {
+        public String toString(){
             return this.name + " " + this.surname;
         }
     }
-    public static void main(String[] args) {
-        Person person = new Person("Fedor", "Dostoevskiy");
+
+    public static void main(String[] args){
+        Person person = new Person("Fedor","Dostoevskiy");
         changePerson(person);
         System.out.println("person = " + person);
     }
 
-    public static void changePerson(Person person) {
-        person = new Person("Lev", "Tolstoy");
+    public static void changePerson(Person person){
+        person.name = "Lev";
+        person.surname = "Tolstoy";
     }
 }
