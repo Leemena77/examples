@@ -14,7 +14,8 @@ public class Main {
         changeValue(value);
         System.out.println("value = " + Arrays.toString(value));
     }
+
     public static void changeValue(Integer[] value){
-        value = new Integer[]{1, 2};
+        value[0] = 99;
     }
     }
